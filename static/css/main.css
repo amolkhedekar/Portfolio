@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+/* Font Styling */
+* {
+  font-family: "Helvetica";
+}
+
+body {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgb(247, 240, 228);
+}
+.transit-vertical {
+  animation: transitionInVertical 0.4s;
+}
+@keyframes transitionInVertical {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*   Navbar Styling  */
+
+.brand {
+  color: palevioletred;
+}
+.navbar-nav {
+  padding-right: 50px;
+}
+.fixedtop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.navbar-nav li {
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #fff;
+}
+.navbar-nav li:hover,
+.active {
+  background-color: palevioletred;
+  border-radius: 10px;
+  color: #fff !important;
+}
+
+.navbar-nav li a:hover {
+  color: #fff !important;
+}
+.content {
+  display: none;
+}
+.loading {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  margin-bottom: auto;
+}
+/*  Intro Styling   */
+.intro {
+  background: url("../images/portfolio3.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 700px;
+  color: #fff;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.intro-title {
+  position: absolute;
+  z-index: 5;
+  text-shadow: 0 0 2px #fff;
+  top: 25%;
+  left: 8%;
+  text-align: center;
+}
+.name {
+  font-size: 50px;
+  z-index: 5;
+  text-shadow: 1px 1px 1px #00f;
+  color: #ff5733;
+}
+.name-specials {
+  color: blueviolet;
+  margin-right: 10px;
+}
+.resume-button {
+  background-color: #ea10a2;
+  color: whitesmoke;
+  font-size: 18px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 0.4s ease;
+  text-shadow: none;
+}
+.resume-button:hover {
+  background-color: transparent;
+  border: 1px solid #ea10a2;
+  border-radius: 10px;
+  color: #000 !important;
+}
+
+/* Connect Styling */
+.connect {
+  min-height: 200px;
+  border-radius: 20px;
+  background-color: rgb(247, 240, 228);
+  transition: all 0.4s ease;
+  transform: translateY(-30%);
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.connect-header,
+.about-me-header,
+.education-header {
+  font-size: 30px;
+  color: black;
+  width: inherit;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  transition: all 0.4s ease;
+}
+
+#connect .fa {
+  margin: 5px;
+  padding: 10px;
+  background-color: #fadbd8;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+#connect .fa:hover {
+  transform: scale(1.2);
+}
+
+/* About Me Styling */
+.about-me {
+  height: 600px;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-pic {
+  text-align: center;
+  padding: 25px;
+}
+.about-pic figure img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 15px auto;
+  border-radius: 50%;
+  border: 4px solid #f4d03f;
+  box-shadow: 0 0 15px palevioletred;
+  transition: all 0.4s ease;
+}
+.about-pic figure img:hover {
+  transform: scale(1.1);
+}
+.about-pic figure figcaption {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.about-text {
+  background-color: honeydew;
+  z-index: 5;
+  padding: 25px;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+}
+.about-text:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  border-left: 0.5rem solid palevioletred;
+  border-top: 0.5rem solid palevioletred;
+}
+.about-text h2 {
+  font-weight: 300;
+  text-shadow: 0 0 1px #666;
+  color: #165503;
+}
+.about-text p {
+  line-height: 2;
+}
+.about-details {
+  color: grey;
+}
+.connect-header:hover,
+.about-me-header:hover,
+.education-header:hover {
+  border-top: 2px solid black;
+}
+
+.skills {
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* Education Styling */
+.education {
+  text-align: center;
+  min-width: 300px;
+  max-width: 500px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.education p {
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+  border-image: #34435e;
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 40px;
+  counter-increment: section;
+  position: relative;
+  color: #34435e;
+}
+.education p:before {
+  content: counter(section);
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: #f5b041;
+  text-align: center;
+  line-height: 1.25em;
+  color: #34435e;
+  font-size: 1em;
+}
+
+.education p:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+}
+.education p:nth-child(odd):before {
+  left: 100%;
+  margin-left: -20px;
+}
+
+.education p:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+}
+.education p:nth-child(even):before {
+  right: 100%;
+  margin-right: -20px;
+}
+
+.education p:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.education p:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.degree-title {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  font-size: 20px;
+  background-color: #3498db;
+}
+
+/* Contact Styling */
+.contact {
+  height: 300px;
+  background-color: #581845;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  color: white;
+  padding-top: 30px;
+}
+.contact-title {
+  color: #f5b041;
+}
+.contact-hr {
+  background-color: #f4d03f;
+}
+.useful-links li {
+  list-style-type: none;
+}
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 565px) {
+  .intro-title {
+    position: absolute;
+    z-index: 5;
+    text-shadow: 0 0 2px #fff;
+    top: 15%;
+    left: 0;
+    text-align: center;
+  }
+  .connect {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 85%;
+  }
+  .about-pic figure img {
+    margin-bottom: 0;
+  }
+  .about-pic figure figcaption {
+    display: none;
+  }
+  .education {
+    margin-top: 600px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+  }
+}

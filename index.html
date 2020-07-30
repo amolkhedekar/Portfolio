@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./static/css/main.css" />
+</head>
+
+<body>
+    <script src="./static/js/jquery.min.js"></script>
+    <script src="./static/js/popper.min.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/typist.js"></script>
+    <script>
+        var text = "\" Let's connect and grow our developer community \""
+        $(function () {
+            $('#navbar').hide();
+            $('.loading').fadeOut(1000, function () {
+                $('.content').fadeIn(2000);
+            });
+        });
+        $(document).on('scroll', function () {
+            if ($(this).scrollTop() >= 100) {
+                $('#connect').addClass("connect");
+                $('#navbar').fadeIn();
+                $('#navbar').addClass('fixedtop');
+                runTypist();
+                $('#typist').removeClass("typist");
+                $('.about-me').addClass("transit-vertical");
+            }
+            else {
+                if ($(this).scrollTop() <= 0) {
+                    $("#navbar").fadeOut();
+                }
+            }
+        });
+        function runTypist() {
+            $('.typist')
+                .typist({
+                    speed: 15,
+                    text: text,
+                    cursor: false
+                });
+        }
+    </script>
+
+    <div class="loading">
+        <img src="./static/images/transparent_loading.gif">
+    </div>
+    <div class="content">
+        <!-- Navbar   -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+            <a class="navbar-brand" href="#">
+                <img src="./static/images/developer.png" width="30" height="30" class="d-inline-block align-top"
+                    alt="i@mDev">
+                i@m<span class="brand">Dev</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#intro">Intro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#connect">Connect</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-me">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Intro Section -->
+        <section class="intro" id="intro">
+            <div class="intro-title">
+                <h3 class="text-dark"> i@m<span class="brand">Dev</span></h3>
+                <p class="name">Amol Khedekar</p>
+                <h4 class="name-specials"><span class="text-dark">&lt </span> Web Developer & Python
+                    Programmer <span class="text-dark">/&gt</span></h4>
+                <a class="mt-4 btn resume-button">See My Resume</a>
+            </div>
+        </section>
+        <!-- Connect Section -->
+        <div class="container" id="connect">
+            <span class="text-dark connect-header">Connect</span>
+            <div class="text-center social-media mt-5">
+                <a href="https://facebook.com/" title="facebook"><i class="fa fa-3x fa-facebook-official"
+                        aria-hidden="true"></i></a>
+                <a href="https://linkedin.com/" title="linkedin"><i class="fa fa-3x fa-linkedin"
+                        aria-hidden="true"></i></a>
+                <a href="https://whatsapp.com/" title="whatsapp"><i class="fa fa-3x fa-whatsapp"
+                        aria-hidden="true"></i></a>
+                <a href="https://telegram.com/" title="telegram"><i class="fa fa-3x fa-telegram"
+                        aria-hidden="true"></i></a>
+                <a href="https://twitter.com/" title="twitter"><i class="fa fa-3x fa-twitter"
+                        aria-hidden="true"></i></a>
+                <h5 class="typist mt-5" id="typist"><em>
+                    </em></h5>
+            </div>
+        </div>
+        <!-- About Me Section -->
+        <div class="about-me mt-3" id="about-me">
+            <div class="container">
+                <span class="text-dark about-me-header">About Me</span>
+                <div class="row mt-4">
+                    <div class="col-12 col-sm-6 mt-5 about-pic">
+                        <figure>
+                            <img src="./static/images/profile.jpg" alt="Amol Khedekar" />
+                            <figcaption>i@m<span class="brand">Dev</span></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-3 about-text">
+                        <h2>Amol Khedekar</h2>
+                        <div class="about-details">
+                            <p>Bsc Computer Science ( Gogate Jogalekar College )</p>
+                            <p>I'm a keen learner wants to learn new things and technolgies</p>
+                        </div>
+                        <hr>
+                        <center>Top Skills</center>
+                        <span class="badge badge-success rounded skills mt-5">Python</span>
+                        <span class="badge badge-success rounded skills">Django</span>
+                        <span class="badge badge-success rounded skills">Node JS</span>
+                        <span class="badge badge-success rounded skills">Javascript</span>
+                        <span class="badge badge-success rounded skills">Android</span>
+                        <span class="badge badge-success rounded skills">REST API</span>
+                        <span class="badge badge-success rounded skills">Linux</span>
+                        <span class="badge badge-success rounded skills">Java</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="education" id="education">
+            <span class="text-dark education-header">Education</span>
+            <div class="mt-5">
+                <p>
+                    <span class="badge badge-pill degree-title"> Bsc Computer Science</span>
+                    <br><br>
+                    2017-2020<br>
+                    Grade : A+ <br>
+                    Gogate Jogalekar College Ratnagiri
+                </p>
+                <p>
+                    <span class="badge badge-pill degree-title"> 12 th HSC </span>
+                    <br><br>
+                    2015-2027<br>
+                    Grade : 86% <br>
+                    Gogate Jogalekar College Ratnagiri
+                </p>
+                <p>
+                    <span class="badge badge-pill degree-title"> 10 th SSC</span>
+                    <br><br>
+                    2014-2015<br>
+                    Grade : 98% <br>
+                    Dnyandeep Vidyamnadir Dapoli
+                </p>
+            </div>
+        </div>
+        <footer class="footer contact" id="contact">
+            <div class="container">
+                <center>
+                    <h1 class="contact-title">Contact Me</h1>
+                    <hr class="contact-hr">
+                    <h3>i@m<span class="brand">Dev</span></h3>
+                    <h2>Amol Khedekar</h2>
+                    <h4>
+                        <address>
+                            Dapoli , Ratnagiri 415712
+                        </address>
+                    </h4>
+                    <b>Email </b> : khedekaramol003@gmail.com <br>
+                    <b>Mobile No</b> : +919421803609
+
+                </center>
+            </div>
+        </footer>
+        <script>
+            var navbar = document.getElementById("navbarNav");
+            var lists = navbar.getElementsByClassName("nav-item");
+            for (var i = 0; i < lists.length; i++) {
+                lists[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "nav-item");
+                    this.className += " active";
+                });
+            }
+        </script>
+    </div>
+</body>
+
+</html>
